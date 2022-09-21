@@ -1,0 +1,50 @@
+﻿<!doctype html>
+
+<html>
+
+<head>
+
+    <link rel="stylesheet" href="/css/site.css" />
+    <script type="text/javascript" src="/js/site.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha384-i61gTtaoovXtAbKjo903+O55Jkn2+RtzHtvNez+yI49HAASvznhe9sZyjaSHTau9" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/themes/smoothness/jquery-ui.css" integrity="sha384-s5lqL1NMu1TdDS/75EsR2IKqj5g2SbplE63nRqwT70/kcm2uFLqKGOCp1phJ2ENd" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/Overcast/jquery-ui.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <script>
+        $(function () {
+            $("#time").dialog({
+                autoOpen: false
+            });
+            $("#openTime").on("click", function () {
+                $("#time").dialog("open");
+            });
+        });
+    </script>
+
+    <title>Mountains of information!</title>
+
+</head>
+
+<body id="imageChange" onclick="ChangeImage()">
+
+    <div id="picture">
+        <h1 onlick="ChangePicture()">Search Engine: There's mountains of information!</h1>
+    </div>
+
+    <input type="text" id="query">
+
+    <button id="searching" onclick="apiSearch()">Search</button>
+
+    <div id="searchResults">
+
+    </div>
+
+    <button id="openTime">Click for the time</button>
+    <div     
+         id="time" title="The current time is" onclick="GetDate()">
+    </div>
+
+</body>
+</html>
+
